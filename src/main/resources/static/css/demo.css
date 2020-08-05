@@ -1,0 +1,120 @@
+
+
+.bg-image-index {
+    background-image: url('https://st2.depositphotos.com/1309454/7392/v/950/depositphotos_73921481-stock-illustration-shopping-online-background.jpg')!important;
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:1000px;
+    position: relative;
+}
+.bg-image-home {
+    background-image: url('https://p7.hiclipart.com/preview/895/732/944/online-shopping-e-commerce-icon-online-shopping-icon.jpg')!important;
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:1000px;
+    position: relative;
+}
+.bg-image-login {
+    background-image: url('https://previews.123rf.com/images/elenavdovina/elenavdovina1612/elenavdovina161200188/68247206-background-seamless-green-product-categories-online-store-seamless-green-background-with-white-line-.jpg')!important;
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:1000px;
+    position: relative;
+}
+.bg-image-register {
+    background-image: url('https://previews.123rf.com/images/elenavdovina/elenavdovina1701/elenavdovina170100352/70728732-background-seamless-orange-product-categories-online-store-seamless-orange-background-with-white-lin.jpg')!important;
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:1000px;
+    position: relative;
+}
+.bg-image-bcg1 {
+    background-image: url('http://cdn.wallpaperhi.com/1280x1024/20120322/headphones%20music%201280x1024%20wallpaper_www.wallpaperhi.com_46.jpg')!important;
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:1000px;
+    position: relative;
+}
+.bg-image-bcg2 {
+    background-image: url('https://images.unsplash.com/photo-1519669556878-63bdad8a1a49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80')!important;
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:1000px;
+    position: relative;
+}
+.bg-image-offers {
+    background-image: url('https://st4.depositphotos.com/13798620/22793/v/600/depositphotos_227936592-stock-video-music-background-dj-night-club.jpg')!important;
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:1000px;
+    position: relative;
+}
+.bg-image-profile {
+    background-image: url('https://ak3.picdn.net/shutterstock/videos/26060543/thumb/1.jpg')!important;
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:1000px;
+    position: relative;
+}
+.bg-image-cart {
+    background-image: url('https://image.freepik.com/foto-gratis/musica-pulso-corazon-fondo-negro-minimalismo_93853-253.jpg')!important;
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:1000px;
+    position: relative;
+}
+.bg-image-add {
+    background-image: url('http://i.imgur.com/GZKgCpk.png')!important;
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:1000px;
+    position: relative;
+}
+.bg-image-delete {
+    background-image: url('https://wallpapercave.com/wp/Hglzzrc.jpg')!important;
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:1000px;
+    position: relative;
+}
+.nothing{
+    font-family: "nothing you could do";
+    font-size: 150px;
+    text-align: center;
+    color: white;
+}
+.righteous{
+    font-family: "righteous";
+    font-size: 40px;
+    color: black;
+}
+.base{
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+.centerText{
+    position: relative;
+    top: 50%;
+}
+
+.textForm{
+    font-family: "girassol";
+    font-size: 32px;
+    color: white;
+}
+.textBorderYellow{
+    font-size: 30px;
+    color: #fdfaff;
+}
