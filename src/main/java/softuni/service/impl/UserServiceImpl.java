@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String username) throws IllegalArgumentException {
         return this.userRepository.findByUsername(username)
                 .orElseThrow(() -> new IllegalArgumentException("Username not found"));
     }
@@ -76,12 +76,7 @@ public class UserServiceImpl implements UserService{
     public UserServiceModel findByUsername(String username) {
         if(this.userRepository.findByUsername(username).isPresent()){
             Optional<User> byUsername = userRepository.findByUsername(username);
-            UserServiceModel userServiceModel = new UserServiceModel();
-            userServiceModel.setId(byUsername.get().getId());
-            userServiceModel.setAuthorities(transfAuthority(byUsername.get().getAuthorities()));
-            userServiceModel.setPassword(byUsername.get().getPassword());
-            userServiceModel.setUsername(byUsername.get().getUsername());
-            userServiceModel.setEmail(byUsername.get().getEmail());
+            UserServiceModel userServiceModel = this.modelMapper.map(byUsername.get(),UserServiceModel.class);
             return userServiceModel;
         }else{
             return null;
@@ -93,12 +88,7 @@ public class UserServiceImpl implements UserService{
     public UserServiceModel findByEmail(String email) {
         if(this.userRepository.findByEmail(email).isPresent()){
             Optional<User> byUsername = userRepository.findByEmail(email);
-            UserServiceModel userServiceModel = new UserServiceModel();
-            userServiceModel.setId(byUsername.get().getId());
-            userServiceModel.setAuthorities(transfAuthority(byUsername.get().getAuthorities()));
-            userServiceModel.setPassword(byUsername.get().getPassword());
-            userServiceModel.setUsername(byUsername.get().getUsername());
-            userServiceModel.setEmail(byUsername.get().getEmail());
+            UserServiceModel userServiceModel = this.modelMapper.map(byUsername.get(),UserServiceModel.class);
             return userServiceModel;
         }else{
             return null;
@@ -151,12 +141,4 @@ public class UserServiceImpl implements UserService{
         return this.modelMapper.map(this.userRepository.saveAndFlush(user), UserServiceModel.class);
     }
 
-    private Set<RoleServiceModel> transfAuthority(Collection<Role> authorities) {
-        Set<RoleServiceModel> roleServiceModels = new LinkedHashSet<>();
-
-        for (Role authority : authorities) {
-           roleServiceModels.add(this.modelMapper.map(authority,RoleServiceModel.class));
-        }
-        return roleServiceModels;
-    }
 }

@@ -24,7 +24,7 @@
         <tbody>
         <th:block th:each="product : ${order.products}" th:object="${product}">
             <tr class="row mx-auto">
-                <th class="col-md-1 text-center" th:text="${product.id}"></th>
+                <th class="col-md-1 text-center" ></th>
                 <td class="col-md-3 text-center" th:text="*{product.name}"></td>
                 <td class="col-md-2 text-center" th:text="*{price}"></td>
                 <td class="col-md-2 text-center mx-auto" th:text="*{product.description}"></td>

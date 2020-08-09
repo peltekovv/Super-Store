@@ -72,7 +72,6 @@ public class OrderController {
     }
 
     @GetMapping("/my/details/{id}")
-    //@PreAuthorize("isAuthenticated()")
     public ModelAndView myOrderDetails(@PathVariable Long id, ModelAndView modelAndView) {
         OrderViewModel orderViewModel = this.mapper.map(this.orderService.findOrderById(id), OrderViewModel.class);
 
@@ -80,7 +79,6 @@ public class OrderController {
 
         modelAndView.setViewName("order-details");
 
-        System.out.println();
 
         return modelAndView;
     }

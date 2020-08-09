@@ -4,6 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import softuni.model.entity.Role;
+import softuni.model.service.ProductServiceModel;
 import softuni.model.service.RoleServiceModel;
 import softuni.repository.RoleRepository;
 import softuni.service.RoleService;
@@ -42,6 +43,10 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public RoleServiceModel findByAuthority(String authority) {
-        return this.modelMapper.map(roleRepository.findByAuthority(authority),RoleServiceModel.class);
+        return roleRepository.findByAuthority(authority)
+                .map(r -> {
+                    return this.modelMapper.map(r, RoleServiceModel.class);
+                }).orElse(null);
+
     }
 }
